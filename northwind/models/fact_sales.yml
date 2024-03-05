@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: Sales fact table. Transaction one row per sale.
+    columns:
+      - name: OrderId
+        description: Degenerate dimension for of the order.
+        tests:
+            - not_null
+      - name: employeekey
+        description: Dimension key for dim_employee
+      - name: customerkey
+        description: Dimension key for dim_customer
+      - name: productkey
+        description: Dimension key for dim_product
+      - name: orderdatekey
+        description: date of the order
+      - name: quantity
+        description: additive fact for total quantity of product sold on order
+      - name: extended_price_amount
+        description: additive fact for price of order without discount amount quantity * product price    
+      - name: discount_amount
+        description: additive fact for discount amount of order. quantity * product price * discount 
+      - name: totalorderamount
+        description: additive fact for total amount of product on order quantity * product price - discount
