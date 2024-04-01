@@ -1,0 +1,73 @@
+version: 2
+
+sources:
+  - name: conformed
+    database: raw
+    schema: conformed
+    
+    tables:
+      - name: DateDimension
+        columns:
+          - name: DateKey
+            tests:
+              - unique
+
+  - name: FUDGEFLIX_V3
+    database: raw
+    schema: FUDGEFLIX_V3
+
+    tables:
+      - name: accounts
+        columns:
+          - name: account_id
+            tests:
+              - unique
+      - name: account_billing
+        columns:
+          - name: ab_id
+            tests:
+              - unique
+      - name: plans
+        columns:
+          - name: plan_id
+            tests:
+              - unique
+      - name: zipcodes
+        columns:
+          - name: zip_code
+            tests:
+              - unique
+
+
+  - name: FUDGEMART_V3
+    database: raw
+    schema: FUDGEMART_V3
+
+    tables:
+      - name: departments
+        columns:
+          - name: department_id
+            tests:
+              - unique
+      - name: orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+      - name: products
+        columns:
+          - name: product_id
+            tests:
+              - unique
+      - name: vendors
+        columns:
+          - name: vendor_id
+            tests:
+              - unique
+      - name: customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+      - name: order_details      
+

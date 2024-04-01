@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_customers_account
+    description: clients, being customers or account. One row per customer (fudgemart) or account (fudgeflix)
+    columns:
+      - name: customer_account_key
+        description: The surrogate key of the client
+        tests:
+          - not_null
+          - unique
+      - name: customer_account_ff_id
+        description: primary key of the sources systems of customers (business key) FudgeFlix. 
+        tests:
+          - unique
+      - name: customer_account_fm_id
+        description: primary key of the source systems of customers (business key) FudgeMart
+        tests:
+          - unique
+      - name: customer_account_email
+        description: customer email (business key)
+        tests:
+          - not_null
+          - unique
+        
