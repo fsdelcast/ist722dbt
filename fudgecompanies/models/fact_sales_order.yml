@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: fact_sales_order
+    description: Transaction. One row per product sale (detail). Use to track sales of FUDGEMART and FUDGEFLIX company.
+    columns:
+      - name: order_key
+        description: Degenerate dimension for the order.
+        tests:
+            - not_null
+      - name: product_plan_company
+        description: Specific fudgecompany, either fudgemart or fudgeflix
+      - name: product_plan_key
+        description: Dimension FK for dim_products_plans
+      - name: customer_key
+        description: Dimension FK for dim_customers_accounts depending on the company
+      - name: date_key
+        description: Dimension FK for dim_dates
+      - name: quantity
+        description: Product quantity of the sale for fudgemart and 1 for fudgeflix. Additive fact for total quantity of product sold on order
+      - name: product_retail_price
+        description: retail price of the product for fudgemart or billed amount for fudgeflix.
+      - name: sold_amount
+        description: The multiplication between unit retail price and quantity
+
+    unique:
+      - columns: [order_key, product_plan_key]
+ 
+

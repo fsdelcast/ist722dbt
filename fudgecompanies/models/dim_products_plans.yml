@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_products_plans
+    description: Sellable items Dimension. one row per product (fudgemart) or plan (fudgeflix)
+    columns:
+      - name: product_plan_key
+        description: The surrogate key of the sellable item.
+        tests:
+          - not_null
+          - unique
+      - name: product_plan_company
+        description: Company  or source of the data (fudgemart or fudgeflix)
+        tests:
+          - not_null
+      - name: product_plan_id
+        description: The business / source key of the sellable item, product or plan.
+        tests:
+          - not_null
+      - name: vendor_id
+        description: The business / source key of the vendor of the item plan.
+
