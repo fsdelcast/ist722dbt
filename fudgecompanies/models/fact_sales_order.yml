@@ -7,7 +7,6 @@ models:
       - name: order_key
         description: Degenerate dimension for the order.
         tests:
-            - unique
             - not_null
       - name: product_plan_company
         description: Specific fudgecompany, either fudgemart or fudgeflix
@@ -23,5 +22,8 @@ models:
         description: retail price of the product for fudgemart or billed amount for fudgeflix.
       - name: sold_amount
         description: The multiplication between unit retail price and quantity
+
+    unique:
+      - columns: [order_key, product_plan_key]
  
 

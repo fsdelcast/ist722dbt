@@ -1,5 +1,5 @@
 -- fudgemart
-WITH A as (
+WITH fudgemart as (
 SELECT 
     'FudgeMart' as product_plan_company,
     m.product_id as product_plan_id,
@@ -16,8 +16,8 @@ FROM
 JOIN 
     {{ source('FUDGEMART_V3', 'vendors') }} v ON m.product_vendor_id = v.vendor_id
 ),
-B AS (
 -- fudgeflix
+fudgeflix as (
 SELECT 
     'FudgeFlix' as product_plan_company,
     m.plan_id as product_plan_id,
@@ -35,8 +35,10 @@ FROM
 
 SELECT
     {{ dbt_utils.generate_surrogate_key(['a.product_plan_company', 'a.product_plan_id']) }} AS product_plan_key,
-     * FROM A a
+     * 
+FROM fudgeflix a
 UNION ALL 
 SELECT 
-        {{ dbt_utils.generate_surrogate_key(['b.product_plan_company', 'b.product_plan_id']) }} AS product_plan_key,
-* FROM B b
+    {{ dbt_utils.generate_surrogate_key(['b.product_plan_company', 'b.product_plan_id']) }} AS product_plan_key,
+    * 
+FROM fudgemart b
