@@ -48,7 +48,7 @@ In this process we have accounts that are subscribed to different types of plans
 
 The bus matrix for the project is in the following excel file in the "bus matrix" tab.
 
-[Bus Matrix](Dimensional-Modeling-Workbook.xlsx)
+[Bus Matrix](Final%20Project%20Documentation/Dimensional-Modeling-Workbook.xlsx)
 
 ## Issues, questions or doubts
 How to combine the 2 databases into 1. 
@@ -58,11 +58,11 @@ What happen if the information are not the same
 ## detail-level modeling
 The detail-level modeling for the project is in the following excel file under each dimension or fact tab. 
 
-[Detail-level Modeling](Dimensional-Modeling-Workbook.xlsx)
+[Detail-level Modeling](Final%20Project%20Documentation/Dimensional-Modeling-Workbook.xlsx)
 
 Furthermore, this is the star schema of the detail modeling. 
 
-![Detail-modeling](./Detail_data_modeling-2024-04-06_16-21.png)
+![Detail-modeling](Final%20Project%20Documentation/Detail_data_modeling-2024-04-06_16-21.png)
 
 
 ## Naming conventions and project standards
