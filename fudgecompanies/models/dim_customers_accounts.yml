@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: dim_customers_account
-    description: clients, being customers or account. One row per customer (fudgemart) or account (fudgeflix)
+    description: clients, being customers or accounts. One row per customer (fudgemart) or account (fudgeflix)
     columns:
       - name: customer_account_key
         description: The surrogate key of the client
@@ -22,4 +22,8 @@ models:
         tests:
           - not_null
           - unique
+      - name: customer_account_full_name
+        description: customer full name
+        tests:
+          - not_null
         

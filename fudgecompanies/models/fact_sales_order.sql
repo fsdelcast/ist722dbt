@@ -32,7 +32,7 @@ LEFT JOIN {{ source('FUDGEMART_V3', 'customers') }} c ON o.customer_id=c.custome
 SELECT 
     {{ dbt_utils.generate_surrogate_key(['ff.product_plan_company', 'ff.product_plan_key']) }} AS product_plan_key,
     {{ dbt_utils.generate_surrogate_key(['ff.email']) }} AS customer_account_key,
-    ff.product_plan_company,
+    --ff.product_plan_company,
     ff.order_key,
     ff.date_key, ff.quantity, ff.product_retail_price, ff.sold_amount 
 FROM fudgeflix ff
@@ -40,7 +40,7 @@ UNION
 SELECT 
     {{ dbt_utils.generate_surrogate_key(['fm.product_plan_company', 'fm.product_plan_key']) }} AS product_plan_key,
     {{ dbt_utils.generate_surrogate_key(['fm.email']) }} AS customer_account_key,
-    fm.product_plan_company,
+    --fm.product_plan_company,
     fm.order_key,
     fm.date_key, fm.quantity, fm.product_retail_price, fm.sold_amount 
 FROM fudgemart fm

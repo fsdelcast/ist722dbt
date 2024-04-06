@@ -17,6 +17,9 @@ models:
         description: The business / source key of the sellable item, product or plan.
         tests:
           - not_null
-      - name: vendor_id
+      - name: product_plan_vendor_id
         description: The business / source key of the vendor of the item plan.
-
+      - name: product_plan_retail_price
+        description: The product or plan selling price. 
+        tests:
+          - not_null
