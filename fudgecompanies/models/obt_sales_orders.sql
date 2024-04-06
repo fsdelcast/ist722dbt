@@ -11,7 +11,7 @@ d_date as (
     select * from {{ ref('dim_date') }}
 )
 
-select f.*, 
+select f.*, d_product.product_plan_company,
     d_customer.customer_account_ff_id, d_customer.customer_account_fm_id, d_customer.customer_account_email, 
     CONCAT(d_customer.customer_account_firstname, ' ', d_customer.customer_account_lastname) as full_name,
     d_customer.customer_account_city, d_customer.customer_account_state,
