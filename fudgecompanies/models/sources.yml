@@ -37,7 +37,21 @@ sources:
           - name: zip_code
             tests:
               - unique
-
+      - name: titles
+        columns:
+          - name: title_id
+            tests:
+              - unique
+      - name: genres
+        columns:
+          - name: genre_name
+            tests:
+              - unique
+      - name: account_titles
+        columns:
+          - name: at_id
+            tests:
+              - unique
 
   - name: FUDGEMART_V3
     database: raw

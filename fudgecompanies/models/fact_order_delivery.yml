@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: fact_order_delivery
+    description: Accumulating snapshot.
+    columns:
+      - name: order_key
+        description: "Source key."
+        tests:
+          - not_null
+          - unique
+      - name: order_date_key
+        description: "Date of their order."
+        tests:
+          - not_null
+      - name: time_difference
+        description: "Time taken for the delivery."
+        tests:
+          - not_null
+
+
+

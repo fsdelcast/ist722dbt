@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_titles
+    description: "A dimension table for titles, with each row representing a uniquetitle."
+    columns:
+      - name: title_key
+        description: "The surrogate key for the title, unique across the table."
+        tests:
+          - not_null
+          - unique
+      - name: title_id
+        description: "The primary key of the title from the source system."
+      - name: title_name
+        description: "Name of the  title."
+        tests:
+          - not_null
+      - name: title_release_year
+        description: "Release year of the  title."
+      - name: title_rating
+        description: "Rating for the title."
+      - name: title_bluray_available
+        description: "Indicates if the title is available on Blu-ray (Yes/No)."
+      - name: title_type
+        description: "The type or category of the title."
+      - name: title_genre_name
+        description: "The genre name associated with the title."
+      - name: title_genre_id
+        description: "The ID of the genre associated with the  title."
+      - name: genre_name
+        description: "The name of the genre."
