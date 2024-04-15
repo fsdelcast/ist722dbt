@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fact_review
+    description: Transaction. One row per review.
+    columns:
+      - name: review_key
+        description: ID of the account titles.
+        tests:
+          - not_null
+          - unique
+      - name: account_key
+        description: ID of the account.
+        tests:
+          - not_null
+      - name: title_key
+        description: ID of the title.
+        tests:
+          - not_null
+      - name: queue_date
+        description: Queue date of the review.
+      - name: shipped_date
+        description: Date of the shipping.
+      - name: returned_date
+        description: Date of returning.
+      - name: at_rating
+        description: Rating given in the review.
