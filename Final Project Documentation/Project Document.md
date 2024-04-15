@@ -36,14 +36,14 @@ There is a need to analyze the order fulfillment process to see if the time betw
 
 4. FudgeFlix Reviews:
    
-Management wants to create an analysis of ratings by account, state, city, movie title, release year, Blu-ray available and title rating.
+Management wants to create an analysis of ratings by account, state, city, movie title, release year, Blu-ray available, and title rating.
 
 ## Business Processes
 
 We will model the following business processes 
 1. FudgeMart Sales Order:
 
-FudgeMart sells products to customers, these products have a department which is the combination of similar products and each product also has a provider or vendor. Finally, one sale will be represented as one order and each order can have several lines or products with their respective quantity. 
+FudgeMart sells products to customers, these products have a department which is the combination of similar products, and each product also has a provider or vendor. Finally, one sale will be represented as one order and each order can have several lines or products with their respective quantity. 
 
 2. FudgeFlix Revenue:
 
@@ -52,29 +52,34 @@ In this process we have accounts that are subscribed to different types of plans
 # High-level dimensional modeling
 ## Bus matrix
 
-The bus matrix for the project is in the following excel file in the "bus matrix" tab.
+The bus matrix for the project is in the following Excel file in the "bus matrix" tab.
 
 [Bus Matrix](Dimensional-Modeling-Workbook.xlsx)
 
 ## Issues, questions or doubts
-How to combine the 2 databases into 1. 
-What happen if the information are not the same 
+
+We encountered the following issues:
+- How to combine the 2 databases into 1?
+- What happens if the information is not the same?
+
+Thankfully, with research, we could find the correct approach. 
 
 # Detail-level dimensional modeling
 ## detail-level modeling
-The detail-level modeling for the project is in the following excel file under each dimension or fact tab. 
+The detail-level modeling for the project is in the following Excel file under each dimension or fact tab. 
 
 [Detail-level Modeling](Dimensional-Modeling-Workbook.xlsx)
 
-Furthermore, this is the star schema of the detail modeling. 
+Furthermore, this is the star schema of the detailed modeling. 
 
 ![Detail-modeling](./Detail_data_modeling-2024-04-06_16-21.png)
 
 
 ## Naming conventions and project standards
 
-Our naming conventions are to named the dimension tables in plural, our fact table in singular.
-Using snake_case
+Our naming conventions are the following:
+- Name the dimension tables in plural and our fact table in singular.
+- Use snake_case project-wise.
 
 
 # Initial loads Data Pipeline (ETL/ELT)
@@ -82,7 +87,7 @@ Using snake_case
 
 ## Source code for data pipeline
 
-## documentation for data pipelines
+## Documentation for data pipelines
 ## Other documentatiion
 Data quality, master data or survivorship rules
 
