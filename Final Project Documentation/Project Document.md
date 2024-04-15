@@ -85,17 +85,52 @@ Our naming conventions are the following:
 # Initial loads Data Pipeline (ETL/ELT)
 ## Source code for the initial load
 
-The source code fro the initial data load (snowflake) is in the following file.
-
-Snowflake Code
+The source code for the initial data load (snowflake) is in the following file.
 
 [Snowflake Code](Snowflake-code.txt)
 
 ## Source code for data pipeline
 
+The source code for data pipelines is in the following files:
+
+**Dimensions Tables:**
+- [dim_customer_account](../fudgecompanies/models/dim_customer_account.sql)
+- [dim_date](../fudgecompanies/models/dim_date.sql)
+- [dim_products_plans](../fudgecompanies/models/dim_products_plans.sql)
+- [dim_titles](../fudgecompanies/models/dim_titles.sql)
+
+**Fact Tables:**
+- [fact_sales_order](../fudgecompanies/models/fact_sales_order.sql)
+- [fact_order_delivery](../fudgecompanies/models/fact_order_delivery.sql)
+- [fact_review](../fudgecompanies/models/fact_review.sql)
+
+**One Big Table:**
+- [obt_sales_orders](../fudgecompanies/models/obt_sales_orders.sql)
+
+
 ## Documentation for data pipelines
-## Other documentatiion
+The documentation for data pipelines is in the following files:
+
+**Sources:**
+- [Sources](../fudgecompanies/models/sources.yml)
+
+**Dimensions Tables:**
+- [dim_customer_account](../fudgecompanies/models/dim_customer_account.yml)
+- [dim_date](../fudgecompanies/models/dim_date.yml)
+- [dim_products_plans](../fudgecompanies/models/dim_products_plans.yml)
+- [dim_titles](../fudgecompanies/models/dim_titles.yml)
+
+**Fact Tables:**
+- [fact_sales_order](../fudgecompanies/models/fact_sales_order.yml)
+- [fact_order_delivery](../fudgecompanies/models/fact_order_delivery.yml)
+- [fact_review](../fudgecompanies/models/fact_review.yml)
+
+
+## Other documentation
 Data quality, master data or survivorship rules
+
+For our first and second business processes, we combined 2 databases, in order to combine both databases successfully we followed certain survivorship rules. These survivorship rules are as follows:
+- we used the email as a key for merging the customers of both datasets. We used the FudgeFLix database as the primary source and the survivor source in case that the name, address, city, state, and zip code did not match.
 
 # Business Intelligence
 ## BI Documentation
