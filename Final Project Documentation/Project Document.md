@@ -85,6 +85,12 @@ Our naming conventions are the following:
 # Initial loads Data Pipeline (ETL/ELT)
 ## Source code for the initial load
 
+The source code fro the initial data load (snowflake) is in the following file.
+
+Snowflake Code
+
+[Snowflake Code](Snowflake-code.txt)
+
 ## Source code for data pipeline
 
 ## Documentation for data pipelines
