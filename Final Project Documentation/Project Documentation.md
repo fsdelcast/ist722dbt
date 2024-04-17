@@ -134,6 +134,7 @@ For our first and second business processes, we combined 2 databases, in order t
 
 # Business Intelligence
 ## BI Documentation
-Briefly explain the goal of your analytics and what type of BI it is.
+We have developed a tactical analytical tool using Power BI. Within the application, you will find the analytical tool for the first and second processes on the first tab, and for the third and fourth processes on the second tab.
+
 ## Application
-Link of PowerBI dasboard
+[Link of PowerBI dashboard](https://app.powerbi.com/groups/me/reports/b0c9b159-8736-4ddb-9b80-daf1be6d883e/ReportSection?experience=power-bi)
