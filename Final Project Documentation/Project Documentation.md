@@ -138,3 +138,5 @@ We have developed a tactical analytical tool using Power BI. Within the applicat
 
 ## Application
 [Link of PowerBI dashboard](https://app.powerbi.com/groups/me/reports/b0c9b159-8736-4ddb-9b80-daf1be6d883e/ReportSection?experience=power-bi)
+
+[Download PowerBI dashboard](Dashboard_2.pbix)
